@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Enviro Protect Game Prototype</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="registerScreen" class="screen active">
+        <h2>Register Student</h2>
+        <label>Name: <input type="text" id="inputName" /></label><br />
+        <label>Select Group: 
+            <select id="groupSelect">
+                <option value="school">School</option>
+                <option value="college">College</option>
+            </select>
+        </label><br />
+        <button onclick="registerUser()">Register</button>
+    </div>
+
+    <div id="gameScreen" class="screen">
+        <h2>Welcome, <span id="playerName"></span>!</h2>
+        <h3>Group: <span id="playerGroup"></span></h3>
+
+        <section id="taskList">
+            <h3>Available Tasks</h3>
+            <ul id="tasksUl"></ul>
+        </section>
+
+        <section id="myTasks">
+            <h3>My Accepted Tasks</h3>
+            <ul id="myTasksUl"></ul>
+        </section>
+
+        <section id="scoreBoard">
+            <h3>Leaderboard</h3>
+            <ul id="leaderboardUl"></ul>
+        </section>
+
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
